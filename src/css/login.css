@@ -1,0 +1,31 @@
+body {
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.login__container  {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    max-width: 25rem;
+    padding: 1rem;
+    gap: 1rem;
+    border: 1px solid grey;
+    border-radius: 12px;
+}
+
+.form  {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    max-width: 25rem;
+    padding: 1rem;
+    gap: 1rem;
+   
+}
+
+.bnt__login {
+    max-width: 50%;
+}
