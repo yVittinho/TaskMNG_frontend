@@ -13,38 +13,116 @@
     <link rel="stylesheet" href="../../src/css/login.css" />
   </head>
   <body>
-    <section class="container-md login__container">
-        <h2 class="h2 m-0">Entrar</h2>
+    <section class="container-md login__container p-5 pb-4 rounded-4 shadow">
+      <h2 class="h2 m-0">Entre com sua conta</h2>
       <form action="" method="post" class="form">
-          <div class="form-floating mb-3">
-            <input
-              type="email"
-              class="form-control"
-              id="floatingInput"
-              placeholder="name@example.com"
-              aria-required="true"
-              required
-            />
-            <label for="floatingInput">Endereço de E-mail</label>
-          </div>
-          <div class="form-floating d-flex flex-column gap-2">
-            <input
-              type="password"
-              class="form-control"
-              id="floatingPassword"
-              placeholder="Senha"
-              aria-required="true"
-              required
-            />
-            <label for="floatingPassword">Senha</label>
-            <a href="http://" target="_blank" rel="noopener noreferrer" class="password-reset text-decoration-none pl-3">Esqueci a senha</a>
-          </div>
-          <button class="btn btn-primary btn__login" type="submit">Entrar</button>
+        <div class="form-floating mb-3">
+          <input
+            type="email"
+            class="form-control"
+            id="floatingInput"
+            placeholder="name@example.com"
+            aria-required="true"
+            required
+          />
+          <label for="floatingInput">Endereço de E-mail</label>
+        </div>
+        <div class="form-floating d-flex flex-column gap-2">
+          <input
+            type="password"
+            class="form-control"
+            id="floatingPassword"
+            placeholder="Senha"
+            aria-required="true"
+            required
+          />
+          <label for="floatingPassword">Senha</label>
+          <button
+            class="password-reset text-decoration-none btn btn-sm btn-link text-start p-0"
+            id="passwordReset"
+            data-bs-toggle="modal"
+            data-bs-target="#modal-form"
+          >
+            Esqueci a senha
+          </button>
+        </div>
+        <button class="btn btn-primary btn__login" type="submit">Entrar</button>
+
+        <!-- <p class="lead fs-6 fw-lighter"> Ao clicar em entrar, você estará concordando com os termos de uso.</p> -->
       </form>
     </section>
+
+    <div
+      class="modal fade"
+      id="modal-form"
+      tabindex="-1"
+      aria-labelledby="tituloModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 shadow">
+          <div class="modal-header p-4 border-bottom-0">
+            <h1 class="fw-bold mb-0 fs-4">Recuperar senha</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+
+          <div class="modal-body p-4">
+            <form>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control rounded-3"
+                  id="emailUsuario"
+                  placeholder="name@example.com"
+                  aria-required="true"
+                  required
+                />
+                <label for="emailUsuario">Digite seu e-mail</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control rounded-3"
+                  id="novaSenha"
+                  placeholder="Digite sua senha"
+                  aria-required="true"
+                  required
+                />
+                <label for="novaSenha">Digite sua senha</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control rounded-3"
+                  id="confirmarNovaSenha"
+                  placeholder="Confirme sua senha"
+                  aria-required="true"
+                  required
+                />
+                <label for="confirmarNovaSenha">Confirme sua senha</label>
+              </div>
+              <button
+                class="w-100 mb-2 btn btn-lg rounded-3 btn-primary"
+                type="submit"
+              >
+                Resetar Senha
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Adicionando link para scripts externos -->
     <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="../../src/js/main.js"></script>
+    <script src="../js/login.js"></script>
   </body>
 </html>
