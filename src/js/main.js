@@ -1,3 +1,3 @@
 // index.js ou main.js
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import '../../vendor/bootstrap/css/bootstrap.min.css';
+import '../../vendor/bootstrap/js/bootstrap.min.js';

@@ -1,16 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaskMNG </title>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskMNG | Página Inicial</title>
 
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Adicionando links externos de estilização -->
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+  </head>
+  <body>
+    <header class="" id="header">
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm px-5 py-4"
+      >
+        <div class="container ">
+          <a class="navbar-brand" href="#">
+            <h1 class="h1 fs-2">
+              TaskMNG
+            </h1>
+          </a>
 
-</head>
-<body>
+          <!-- Botão Hamburger -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuNavegacao"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="main.js"></script>
-</body>
+          <!-- Itens do menu -->
+          <div class="collapse navbar-collapse gap-5" id="menuNavegacao">
+            <ul class="navbar-nav ms-auto d-flex flex-fill justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sobre o Projeto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Criadores</a>
+              </li>
+            </ul>
+            <div class="btn-login__container">
+              <a
+                class="btn text-white btn-outline-primary"
+                href="../src/pages/login.html"
+                >Entrar</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Adicionando link para scripts externos -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../src/js/main.js"></script>
+  </body>
 </html>
