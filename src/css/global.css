@@ -1,0 +1,21 @@
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+/* Apenas para diferenciar visualmente cada seção */
+#inicio {
+  background-color: #ffffff;
+}
+
+#sobre {
+  background-color: #f8f9fa;
+}
+
+#criadores {
+  background-color: #212529;
+  color: #fff;
+}
