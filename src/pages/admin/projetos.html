@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskMNG | Projetos</title>
+
+    <link
+      href="../../../vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark shadow-sm p-3">
+      <div class="container">
+        <a href="./painel.html" class="navbar-brand fw-bold fs-4"
+          >← Voltar | Projetos</a
+        >
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <h1 class="text-center fw-bold mb-5">Gerenciamento de Projetos</h1>
+
+      <!-- FORMULÁRIO DE CADASTRO -->
+      <section class="card shadow-sm p-4 mb-5">
+        <h2 class="fs-4 mb-3">Cadastrar Novo Projeto</h2>
+        <form id="formProjeto" class="form-admin" novalidate>
+          <div class="row g-3">
+            <div class="col-md-8">
+              <label for="descricao" class="form-label"
+                >Descrição do Projeto</label
+              >
+              <input
+                type="text"
+                id="descricao"
+                class="form-control"
+                required
+                minlength="5"
+                placeholder="Ex: Sistema de Gestão de Tarefas"
+              />
+              <div class="invalid-feedback">
+                Digite uma descrição válida (mínimo 5 caracteres).
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="status" class="form-label">Status</label>
+              <select id="status" class="form-select" required>
+                <option value="">Selecione...</option>
+                <option value="EM_ANDAMENTO">Em Andamento</option>
+                <option value="CONCLUIDO">Concluído</option>
+                <option value="CANCELADO">Cancelado</option>
+              </select>
+              <div class="invalid-feedback">
+                Selecione um status para o projeto.
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="text-end mt-4 d-flex justify-content-end gap-2 form-actions"
+          >
+            <button type="submit" class="btn btn-success px-4">
+              <i class="bi bi-kanban"></i> Cadastrar Projeto
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- TABELA DE PROJETOS -->
+      <section>
+        <h2 class="fs-4 mb-3">Projetos Cadastrados</h2>
+        <div class="table-responsive shadow-sm">
+          <table class="table table-striped align-middle" id="tabelaProjetos">
+            <thead class="table-dark">
+              <tr>
+                <th>Descrição</th>
+                <th>Status</th>
+                <th class="text-center">Ações</th>
+              </tr>
+            </thead>
+            <tbody id="listaProjetos">
+              <tr>
+                <td colspan="3" class="text-center text-muted">
+                  Carregando...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../js/admin/js/api.js"></script>
+    <script src="../../js/admin/js/projetos.js"></script>
+    <script src="../../js/admin/js/form-utils.js"></script>
+    <script src="../../js/admin/js/footer.js"></script>
+  </body>
+</html>

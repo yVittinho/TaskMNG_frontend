@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskMNG | Equipes</title>
+
+    <link
+      href="../../../vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark shadow-sm p-3">
+      <div class="container">
+        <a href="./painel.html" class="navbar-brand fw-bold fs-4"
+          >← Voltar | Equipes</a
+        >
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <h1 class="text-center fw-bold mb-5">Gerenciamento de Equipes</h1>
+
+      <!-- FORMULÁRIO DE CADASTRO -->
+      <section class="card shadow-sm p-4 mb-5">
+        <h2 class="fs-4 mb-3">Cadastrar Nova Equipe</h2>
+        <form id="formEquipe" class="form-admin" novalidate>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <label for="nomeEquipe" class="form-label">Nome da Equipe</label>
+              <input
+                type="text"
+                id="nomeEquipe"
+                class="form-control"
+                required
+                minlength="3"
+                placeholder="Ex: Equipe Front-end"
+              />
+              <div class="invalid-feedback">
+                Digite um nome válido para a equipe.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="projeto" class="form-label"
+                >Projeto Associado (ID)</label
+              >
+              <input
+                type="number"
+                id="projeto"
+                class="form-control"
+                required
+                placeholder="Ex: 3"
+              />
+              <div class="invalid-feedback">Informe o ID do projeto.</div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="techLead" class="form-label">Tech Lead (ID)</label>
+              <input
+                type="number"
+                id="techLead"
+                class="form-control"
+                required
+                placeholder="Ex: 2"
+              />
+              <div class="invalid-feedback">Informe o ID do Tech Lead.</div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="ativo" class="form-label">Status</label>
+              <select id="ativo" class="form-select" required>
+                <option value="">Selecione...</option>
+                <option value="1">Ativo</option>
+                <option value="0">Inativo</option>
+              </select>
+              <div class="invalid-feedback">Selecione o status da equipe.</div>
+            </div>
+          </div>
+
+          <div
+            class="text-end mt-4 d-flex justify-content-end gap-2 form-actions"
+          >
+            <button type="submit" class="btn btn-primary px-4">
+              <i class="bi bi-people"></i> Cadastrar Equipe
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- TABELA DE EQUIPES -->
+      <section>
+        <h2 class="fs-4 mb-3">Equipes Cadastradas</h2>
+        <div class="table-responsive shadow-sm">
+          <table class="table table-striped align-middle" id="tabelaEquipes">
+            <thead class="table-dark">
+              <tr>
+                <th>Nome</th>
+                <th>Projeto</th>
+                <th>Tech Lead</th>
+                <th>Status</th>
+                <th class="text-center">Ações</th>
+              </tr>
+            </thead>
+            <tbody id="listaEquipes">
+              <tr>
+                <td colspan="5" class="text-center text-muted">
+                  Carregando...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../js/admin/js/api.js"></script>
+    <script src="../../js/admin/js/equipes.js"></script>
+    <script src="../../js/admin/js/form-utils.js"></script>
+    <script src="../../js/admin/js/footer.js"></script>
+  </body>
+</html>

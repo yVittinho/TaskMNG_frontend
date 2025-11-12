@@ -6,7 +6,10 @@
     <title>TaskMNG | Página Inicial</title>
 
     <!-- Bootstrap e CSS Externo -->
-    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="../../vendor/bootstrap/css/bootstrap.min.css"
+    />
     <link
       rel="stylesheet"
       type="text/css"
@@ -23,8 +26,8 @@
         class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm px-5 py-4"
       >
         <div class="container">
-          <a class="navbar-brand" href="#inicio">
-            <h1 class="h1 fs-2 m-0">TaskMNG</h1>
+          <a class="navbar-brand" href="../pages/index.html">
+            <h1 class="h1 fs-2 m-0 text-start">TaskMNG</h1>
           </a>
 
           <!-- Botão Hamburger -->
@@ -59,7 +62,7 @@
             <div class="btn-login__container">
               <a
                 class="btn text-white btn-outline-primary"
-                href="../src/pages/login.html"
+                href="../pages/login.html"
               >
                 Entrar
               </a>
@@ -95,7 +98,7 @@
               class="d-grid gap-2 d-md-flex justify-content-center justify-content-md-start align-items-center mt-4"
             >
               <a
-                href="../src/pages/login.html"
+                href="../../src/pages/login.html"
                 class="btn btn-primary btn-lg px-4 fw-bold"
               >
                 Experimente já
@@ -110,7 +113,7 @@
             class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg mt-4 mt-lg-0"
           >
             <img
-              src="../image.png"
+              src="../assets/painel.png"
               alt="TaskMNG dashboard"
               class="img-fluid rounded-3"
             />
@@ -161,68 +164,13 @@
       </section>
 
       <!-- SEÇÃO 3: CRIADORES -->
-      <!-- <section
-
-        id="criadores"
-        class="d-flex align-items-center justify-content-center min-vh-100 text-center"
-      >
-        <div class="p-4">
-          <h2 class="display-6 fw-bold mb-5">Criadores do Projeto</h2>
-    
-          <div class="card__container d-flex flex-row gap-5">
-            <article class="card p-3 d-flex flex-column  justify-content-between align-items-center" style="width: 20rem">
-              <img
-                src="https://github.com/yVittinho.png"
-                class="card-img-top rounded-circle"
-                alt="..."
-              />
-              <div class="card-body d-flex flex-column  justify-content-between align-items-center">
-                <h5 class="card-title">Victtor Marcelo</h5>
-                <p class="card-text">
-                  Desenvolvedor Front-end e Gestor de Projetos DevOps
-                </p>
-                <div>
-                  <a href="https://www.linkedin.com/in/victtormarcelo/" target="_blank" class="text-decoration-none">
-                    <i class="devicon-linkedin-plain colored fs-1"></i>
-                  </a>
-                  <a href="https://github.com/yVittinho" target="_blank" class="text-decoration-none">
-                    <i class="devicon-github-original fs-1 text-dark"></i>
-                  </a>
-                </div>
-              </div>
-            </article>
-            <article class="card p-3 d-flex flex-column justify-content-between align-items-center" style="width: 20rem">
-              <img
-                src="https://github.com/murilloaragaao.png"
-                class="card-img-top rounded-circle"
-                
-                alt="..."
-              />
-              <div class="card-body d-flex flex-column justify-content-between align-items-center">
-                <h5 class="card-title">Murillo Monteiro</h5>
-                <p class="card-text">
-                  Desenvolvedor Back-end
-                </p>
-                <div>
-                  <a href="https://www.linkedin.com/in/murilloaragao/" target="_blank" class="text-decoration-none">
-                    <i class="devicon-linkedin-plain colored fs-1"></i>
-                  </a>
-                  <a href="https://github.com/murilloaragaao" target="_blank" class="text-decoration-none">
-                    <i class="devicon-github-original fs-1 text-dark"></i>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-        </div>
-        <a href="#inicio" class="btn btn-light mt-3">Voltar ao início ↑</a>
-      </section> -->
+ 
       <section
         id="criadores"
-        class="d-flex align-items-center justify-content-center min-vh-100 text-center bg-dark text-white"
+        class="d-flex align-items-center justify-content-center min-vh-100 text-center bg-light text-white"
       >
         <div class="container py-5">
-          <h2 class="display-6 fw-bold mb-5">Criadores do Projeto</h2>
+          <h2 class="display-6 fw-bold mb-5 text-dark">Criadores do Projeto</h2>
 
           <!-- Grid responsivo -->
           <div class="row justify-content-center g-4">
@@ -299,16 +247,22 @@
             </div>
           </div>
 
-          <a href="#inicio" class="btn btn-light mt-5">Voltar ao início ↑</a>
+          <a href="#inicio" class="btn btn-outline-dark mt-5">Voltar ao início ↑</a>
         </div>
       </section>
     </main>
-    <footer class="footer mt-auto py-3 bg-body-tertiary">
-      <div class="container">
-        <span class="text-body-secondary"
-          >All coprights reserved. 2025</span
+    <footer class="text-center py-3 shadow-lg bg-dark text-white fixed-bottom">
+      <p class="m-0">
+        &copy; 2025 TaskMNG | Desenvolvido por Murillo Aragão e Victtor Marcelo
+        <br />
+        <a
+          href="https://github.com/yVittinho/TaskMNG_frontend"
+          target="_blank"
+          class="text-decoration-none text-white-50"
         >
-      </div>
+          <i class="bi bi-github me-1"></i> Repositório no GitHub
+        </a>
+      </p>
     </footer>
 
     <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
